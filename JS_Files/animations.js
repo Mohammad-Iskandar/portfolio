@@ -117,15 +117,4 @@ navLinks.forEach((link) => {
     observer.observe(section);
     });
 });
-//pre loader animation
 
-window.addEventListener("load", function () {
-  const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  preloader.style.pointerEvents = "none";
-
-  setTimeout(() => {
-    preloader.style.display = "none";
-    document.body.classList.remove("preload");
-  }, 1000); 
-});
