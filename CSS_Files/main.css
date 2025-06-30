@@ -640,7 +640,7 @@ nav ul li a:hover
     position: absolute;
     right: 0;
     left: 0;
-    top: -87px;
+    top: -59px;
     z-index: 1;
     display: block;
     height: 60px;
@@ -651,7 +651,7 @@ nav ul li a:hover
 @media (max-width :450px)
 {
     .spikes::after {
-        top: -140px !important;
+        top: -100px !important;
     }
 }
 /* portfolio */
