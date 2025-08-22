@@ -640,7 +640,7 @@ nav ul li a:hover
     position: absolute;
     right: 0;
     left: 0;
-    top: -59px;
+    top: -65px;
     z-index: 1;
     display: block;
     height: 60px;
@@ -651,7 +651,7 @@ nav ul li a:hover
 @media (max-width :450px)
 {
     .spikes::after {
-        top: -100px !important;
+        top: -110px !important;
     }
 }
 /* portfolio */
@@ -779,36 +779,24 @@ h1.portfolio-title {
     border-radius: 1em;
     float: left;
     width: 200px;
-    height: 180px;
+    /* height: 180px; */
     background-size: cover;
     }
-.portfolio .wrap.miskcamping .inset 
+.portfolio .wrap.miskcamping .inset,
+.portfolio .wrap.MAA .inset,
+.portfolio .wrap.courseshub .inset
 {
-    animation: change-bg-misk 12s linear infinite;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 } 
-@keyframes change-bg-misk {
-    0%{background-image: url(../Images/About\ Us.png);}
-    50%{background-image: url(../Images/Contact\ Us.png);}
-    75%{background-image: url(../Images/Our\ Location.png);}
-    100%{background-image: url(../Images/MiskCamping.png);}
-}
-.portfolio .wrap.MAA .inset 
+.portfolio .wrap.miskcamping .inset img,
+.portfolio .wrap.MAA .inset img,
+.portfolio .wrap.courseshub .inset img
 {
-    animation: change-bg-maa 12s linear infinite;
-} 
-@keyframes change-bg-maa {
-    0%{background-image: url(../Images/MAA-1.jpg);}
-    50%{background-image: url(../Images/MAA-2.jpg);}
-    75%{background-image: url(../Images/MAA-3.jpg);}
-    100%{background-image: url(../Images/MAA-4.jpg);}
-}
-.portfolio .wrap.courseshub .inset 
-{
-    animation: change-bg-courseshub 6s linear infinite;
-} 
-@keyframes change-bg-courseshub {
-    0%{background-image: url(../Images/CS/p2.png);}
-    100%{background-image: url(../Images/CS/p1.png);}
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
 }
 .portfolio .dots {
 	position: absolute;
@@ -854,10 +842,14 @@ h1.portfolio-title {
 .portfolio .wrap.courseshub .text
 {
     background-color: #a6976e;
+    display: flex;
+    flex-direction: column;
 }
 .portfolio .wrap.MAA .text
 {
     background-color: #358e76;
+    display: flex;
+    flex-direction: column;
 }
 .portfolio .text button.see_more
 {
@@ -1763,7 +1755,7 @@ color: var(--special-text-color);
     position: relative;
     top :7%;
     margin-bottom: 100px;
-    margin-top: 50 px !important;
+    margin-top: 50px;
 }
 .postsAndReels .posts ,
 .postsAndReels .reels 
@@ -1810,9 +1802,9 @@ color: var(--special-text-color);
     {
         font-size: 60px;
     }
-	.postsAndReels
+    .postsAndReels
 {
-    margin-top: 80 px !important ;
+    margin-top: 80px;
 }
 }
 header .links li.portfolioLi ul.works 
@@ -1988,4 +1980,65 @@ header .links li.portfolioLi:hover ul.works
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+/* pre loader */
+.loader {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0e0e0e; /* أو أي لون غامق يناسب الانيميشن */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+    overflow: hidden;
+    background-color: white;
+    margin: 0 15px;
+    height: 150px;
+    width: 40px;
+    border-radius: 30px;
+    box-shadow: -4px -1px 20px 0px #777777;
+    position: relative;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px #2697f3,
+    inset 0px 0px 0px rgba(0, 0, 0, 0.1);
+    animation: animate_2 2.5s ease-in-out infinite;
+    animation-delay: calc(-0.5s * var(--i));
+}
+
+@keyframes animate_2 {
+    0% {
+    transform: translateY(250px);
+    filter: hue-rotate(0deg);
+    }
+    50% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(250px);
+    filter: hue-rotate(180deg);
+    }
+}
+@media (max-width:767px) {
+    .slider {
+        height: 80px;
+        width: 20px;
+    }
+}
+body.preload *:not(.loader):not(.loader *) {
+    visibility: hidden !important;
 }
