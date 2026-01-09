@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,47 +30,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="x-icon" href="Images/XIcon.png">
     <body class="body_container">
-    <header class="container">
-        <nav>
-            <div class="logo">
-                <a href=""><img src="Images/Logo.png" alt="Mohammad_iskandar_logo" loading="lazy"></a>
-            </div>
-            <ul class="links">
-                <i class="fa-solid fa-bars mobile-trigger"></i>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about_me">About Me</a></li>
-                <li class="portfolioLi">
-                    <a href="#portfolio">Portfolio</a>
-                        <ul class="works">
-                            <li><a href="HTML_Files/MiskCampingWorks.html">Misk Camping</a></li>
-                            <li><a href="HTML_Files/MAAWorks.html">MAA</a></li>
-                            <li><a href="HTML_Files/CoursesHubWorks.html">Courses Hub</a></li>
-                        </ul> 
-                </li> 
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contactme">Contact Me</a></li>
-            </ul>
-            <div class="mobile-overlay">
-                <div class="mobile-content">
-                    <span class="mobile-close">&times;</span>
-                    <ul class="mobile-list">
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#about_me">About Me</a></li>
-                        <li class="portfolioLi">
-                            <a href="#portfolio">Portfolio</a>
-                                <ul class="works">
-                                    <li><a href="HTML_Files/MiskCampingWorks.html">Misk Camping</a></li>
-                                    <li><a href="HTML_Files/MAAWorks.html">MAA</a></li>
-                                    <li><a href="HTML_Files/CoursesHubWorks.html">Courses Hub</a></li>
-                                </ul> 
-                        </li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contactme">Contact Me</a></li>
-                    </ul>
+    <!-- Start Header  -->
+     <header id="main-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="custom-logo-container">
+                        <div class="logo-circle">
+                            <span style="color: var(--primary-color); font-weight: 900; font-size: 20px;">M</span>
+                        </div>
+                        <span class="logo-text">Iskandar</span>
+                    </div>
                 </div>
-            </div>
-        </nav>
+
+                <!-- Desktop Menu -->
+                <ul class="links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about_me">About Me</a></li>
+                    <li class="portfolioLi">
+                        <a href="#portfolio" class="active">Projects <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <ul class="works">
+                            <li><a href="HtML_Files/MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                            <li><a href="HtML_Files/MAAWorks.html"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                            <li><a href="HtML_Files/CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                            <li><a href="HtML_Files/Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="HtML_Files/Certificates.html">Certificates</a></li>
+                    <li><a href="#contactme" class="contact-btn">Contact Me</a></li>
+                </ul>
+
+                <!-- Mobile Trigger -->
+                <button class="mobile-trigger" onclick="toggleMenu(true)">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <!-- Backdrop -->
+                <div class="menu-backdrop" onclick="toggleMenu(false)"></div>
+
+                <!-- Mobile Side Menu -->
+                <div class="mobile-overlay">
+                    <div class="mobile-content">
+                        <span class="mobile-close" onclick="toggleMenu(false)">&times;</span>
+                        
+                        <ul class="mobile-list">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../index.html#about_me">About Me</a></li>
+                            
+                            <li class="projectsLi">
+                                <span class="portfolio-label">Projects</span>
+                                <ul class="works-mobile">
+                                    <li><a href="HtML_Files/MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                                    <li><a href="HtML_Files/MAAWorks.html"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                                    <li><a href="HtML_Files/CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                                    <li><a href="HtML_Files/Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                                </ul> 
+                            </li>
+
+                            <li><a href="../index.html#services">Services</a></li>
+                            <li><a href="HtML_Files/Certificates.html">Certificates</a></li>
+                            <li style="margin-top: 30px;padding: 0px;">
+                                <a href="../index.html#contactme" style="background: var(--primary-color); color: #000; display: block; text-align: center; padding: 5px; border-radius: 12px; font-weight: 800;">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
+    <!-- End Header  -->
     <div class="container landing" id="home">
 
         <div class="hero_section">
@@ -240,6 +270,40 @@
                     </button>
                 </div>
             </div>
+        </div>
+        <div class="wrap creative-snippets box hidden" data-animation="animate pop">
+    <div class="overlay creative-snippets">
+        <div class="overlay-content box hidden" data-animation="animate slide-left delay-2">
+            <h1 class="box hidden" data-animation="animate slide-left pop delay-4">Selected Visual Works</h1>
+        </div>
+        <div class="image-content box hidden" data-animation="animate slide delay-5"></div>
+        <div class="dots box hidden" data-animation="animate">
+            <div class="dot box hidden" data-animation="animate slide-up delay-6"></div>
+            <div class="dot box hidden" data-animation="animate slide-up delay-7"></div>
+            <div class="dot box hidden" data-animation="animate slide-up delay-8"></div>
+        </div>
+    </div>
+    <div class="text">
+        <div class="inset">
+            <img src="Images/CreativeSnippets/Nader_Institute.png" alt="Art Snippet 1">
+            <img src="Images/CreativeSnippets/SoleRestaurant.png" alt="Art Snippet 2">
+        </div>
+        <p>A curated collection of diverse design projects and artistic experiments that go beyond standard categories.</p>
+        <p>This space includes: <br>
+            • Specialized social media designs for various niches. <br>
+            • Creative Videos Using AI Tools <br>
+        </p>
+        <p>These snippets represent my versatility in adapting to different visual styles and creative challenges.</p>
+        <button class="see_more">
+            <a class="animated-button1" href="HTML_Files/Creative Snippets.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Explore The Gallery
+            </a>
+        </button>
+    </div>
         </div>
     </div>
 
