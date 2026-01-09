@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Mohammad Iskandar">
+<meta name="description" content="Explore Creative Snippets by Mohammad Iskandar — a curated gallery of diverse design experiments, motion graphics, and unique visual content that blends code with creativity.">
+<meta name="keywords" content="Creative Snippets, Mohammad Iskandar, design portfolio, miscellaneous works, visual experiments, motion design, creative coding, branding snippets, digital art">
+
+<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="Creative Snippets | Visual Experiments by Mohammad Iskandar">
+<meta property="og:description" content="A diverse collection of creative works, from social media snippets to motion graphics experiments. Where magic meets design.">
+<meta property="og:image" content="https://mohammad-iskandar.github.io/portfolio/Images/misc-thumbnail.jpg">
+<meta property="og:url" content="https://mohammad-iskandar.github.io/portfolio/HTML_Files/Miscellaneous.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creative Snippets | Mohammad Iskandar">
+<meta name="twitter:description" content="Dive into a world of visual variety. Check out my latest design snippets and creative experiments.">
+<meta name="twitter:image" content="https://mohammad-iskandar.github.io/portfolio/Images/misc-thumbnail.jpg">
+
+<title>Creative Snippets | Mohammad Iskandar</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- CSS Files -->
+<link rel="stylesheet" href="../CSS_Files/main.css">
+<link rel="stylesheet" href="../CSS_Files/misc_style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="shortcut icon" type="x-icon" href="../Images/XIcon.png">
+</head>
+
+<body class="body_container">
+
+    <!-- Header -->
+        <header id="main-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="custom-logo-container">
+                        <div class="logo-circle">
+                            <span style="color: var(--primary-color); font-weight: 900; font-size: 20px;">M</span>
+                        </div>
+                        <span class="logo-text">Iskandar</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about_me">About Me</a></li>
+                    <li class="portfolioLi">
+                        <a href="#portfolio" class="active">Projects <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <ul class="works">
+                            <li><a href="MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                            <li><a href="MAAWorks.html"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                            <li><a href="CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                            <li><a href="Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="Certificates.html">Certificates</a></li>
+                    <li><a href="../index.html#contactme" class="contact-btn">Contact Me</a></li>
+                </ul>
+
+                <!-- Mobile Trigger -->
+                <button class="mobile-trigger" onclick="toggleMenu(true)">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <!-- Backdrop -->
+                <div class="menu-backdrop" onclick="toggleMenu(false)"></div>
+
+                <!-- Mobile Side Menu -->
+                <div class="mobile-overlay">
+                    <div class="mobile-content">
+                        <span class="mobile-close" onclick="toggleMenu(false)">&times;</span>
+                        
+                        <ul class="mobile-list">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../index.html#about_me">About Me</a></li>
+                            
+                            <li class="projectsLi">
+                                <span class="portfolio-label">Portfolio</span>
+                                <ul class="works-mobile">
+                                    <li><a href="MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                                    <li><a href="MAAWorks.html"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                                    <li><a href="CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                                    <li><a href="Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                                </ul> 
+                            </li>
+
+                            <li><a href="../index.html#services">Services</a></li>
+                            <li><a href="Certificates.html">Certificates</a></li>
+                            <li style="margin-top: 30px;padding: 0px;">
+                                <a href="../index.html#contactme" style="background: var(--primary-color); color: #000; display: block; text-align: center; padding: 5px; border-radius: 12px; font-weight: 800;">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Creative Snippets Section (Miscellaneous) -->
+    <div class="misc-section">
+        <h1 class="main-title CreativeSnippets" style="margin: 50px auto 80px; width: fit-content; font-size: 50px;    position: relative;
+        top: 50px;">
+            <span class="flicker">Creative</span> <span class="flicker">Snippets</span>
+        </h1>
+        <!-- Filter Buttons -->
+        <div class="filters-container">
+            <button class="filter-btn active" onclick="updateFilter('all', this)">All</button>
+            <button class="filter-btn" onclick="updateFilter('social', this)">Social Media Posts</button>
+            <button class="filter-btn" onclick="updateFilter('video', this)">Video Editing</button>
+        </div>
+
+        <div class="masonry-wrapper" id="masonry-wrapper">
+            
+        </div>
+
+
+        <div id="hidden-items-store">
+            
+            <!-- Item 1: University Video -->
+            <div class="masonry-item" data-category="video" onclick="openLightbox(this)">
+                <video src="../Reels/Creative Snippets/The Art Of AI.mp4" muted controls ></video>
+                <div class="item-overlay">
+                    <span class="item-tag">Video Editing</span>
+                    <div class="item-title">University Project (State Of The Art Of AI In 2050)</div>
+                    <div class="item-title">Full Video On -> <a href="https://youtu.be/UFlcgDILCXw" style="    background-color: red;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;"> Youtube </a></div>
+                </div>
+            </div>
+
+            <!-- Item 2: Nader Institute -->
+            <div class="masonry-item" data-category="social" onclick="openLightbox(this)">
+                <img src="../Images/CreativeSnippets/Nader_Institute.png" alt="Engineering Courses Post">
+                <div class="item-overlay">
+                    <span class="item-tag">Social Media Post</span>
+                    <div class="item-title">Nader Institute</div>
+                    <div class="item-location">Germany</div>
+                </div>
+            </div>
+
+            <!-- Item 3: sole Restaurant -->
+            <div class="masonry-item" data-category="social" onclick="openLightbox(this)">
+                <img src="../Images/CreativeSnippets/SoleRestaurant.png" alt="Burger Post">
+                <div class="item-overlay">
+                    <span class="item-tag">Social Media Post</span>
+                    <div class="item-title">Sole Restaurant </div>
+                    <div class="item-location">Syria </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" style="display:none;">
+        <video id="lightbox-video" class="lightbox-content" controls style="display:none;"></video>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="parAndIcons">
+            <p>Thanks for scrolling! 👋 Let’s build something cool together.</p>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <p class="madeWith">Made with 🤍 by Mohammad Iskandar</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- 1. Masonry Logic (Pure JS) ---
+        // نقوم بحفظ نسخة من العناصر الأصلية في الذاكرة
+        let allItems = []; 
+        let currentFilter = 'all';
+
+        function initMasonry() {
+            const store = document.getElementById('hidden-items-store');
+            const wrapper = document.getElementById('masonry-wrapper');
+            
+            // في أول مرة، نقوم بحفظ العناصر من الـ store
+            if(allItems.length === 0 && store) {
+                allItems = Array.from(store.children).map(node => node.cloneNode(true));
+            }
+
+            renderMasonry();
+        }
+
+        function renderMasonry() {
+            const wrapper = document.getElementById('masonry-wrapper');
+            wrapper.innerHTML = ''; // تنظيف الحاوية
+
+            // 1. تحديد عدد الأعمدة بناءً على حجم الشاشة
+            let colCount = 3;
+            if (window.innerWidth <= 900) colCount = 2;
+            if (window.innerWidth <= 600) colCount = 1;
+
+            // 2. إنشاء الأعمدة (divs)
+            const columns = [];
+            for(let i=0; i<colCount; i++) {
+                let col = document.createElement('div');
+                col.className = 'masonry-column';
+                wrapper.appendChild(col);
+                columns.push(col);
+            }
+
+            // 3. تصفية العناصر
+            const filteredItems = allItems.filter(item => {
+                if(currentFilter === 'all') return true;
+                return item.getAttribute('data-category') === currentFilter;
+            });
+
+            // 4. توزيع العناصر على الأعمدة بالتساوي (Round Robin)
+            // هذا يضمن أن العناصر تظهر دائماً بجانب بعضها
+            filteredItems.forEach((item, index) => {
+                // استنساخ العنصر لضمان عدم حدوث مشاكل عند النقل
+                let clone = item.cloneNode(true);
+                clone.classList.add('animate-in'); // اضافة انيميشن
+                
+                // إعادة تفعيل زر التشغيل للفيديوهات (لأن النقل يوقفها أحياناً)
+                let vid = clone.querySelector('video');
+                if(vid) {
+                    vid.muted = true;
+                    vid.play().catch(() => {}); // محاولة التشغيل الصامت
+                }
+
+                // إضافة حدث الـ Click للـ Lightbox مرة أخرى
+                clone.onclick = function() { openLightbox(this); };
+
+                // وضع العنصر في العمود المناسب (0, 1, 2, 0, 1, 2...)
+                columns[index % colCount].appendChild(clone);
+            });
+        }
+
+        // تحديث عند تغيير حجم الشاشة
+        window.addEventListener('resize', () => {
+            renderMasonry();
+        });
+
+        // دالة الفلترة الجديدة
+        function updateFilter(category, btn) {
+            currentFilter = category;
+            
+            // تحديث شكل الأزرار
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            renderMasonry();
+        }
+
+        // تشغيل الدالة عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', initMasonry);
+
+
+        // --- 2. Lightbox Logic ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const video = element.querySelector('video');
+
+            lightbox.classList.add('active');
+
+            if (img) {
+                lightboxImg.src = img.src;
+                lightboxImg.style.display = 'block';
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.pause();
+            } else if (video) {
+                lightboxVideo.src = video.src;
+                lightboxVideo.style.display = 'block';
+                lightboxImg.style.display = 'none';
+                // إلغاء كتم الصوت عند الفتح
+                lightboxVideo.muted = false;
+                lightboxVideo.currentTime = 0;
+                lightboxVideo.play(); 
+            }
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxVideo.pause();
+            lightboxImg.src = ''; 
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    </script>
+    <script src="../JS_Files/animations.js"></script>
+    <script>
+        // تغيير حجم الهيدر عند السكرول
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu(isOpen) {
+            const overlay = document.querySelector('.mobile-overlay');
+            const backdrop = document.querySelector('.menu-backdrop');
+            
+            if (isOpen) {
+                overlay.classList.add('active');
+                backdrop.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('active');
+                backdrop.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
