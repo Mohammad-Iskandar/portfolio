@@ -32,52 +32,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" type="x-icon" href="../Images/XIcon.png">
     <body class="body_container">
-    <header class="container">
-        <nav>
-            <div class="logo">
-                <a href=""><img src="../Images/Logo.png" alt="Mohammad_iskandar_logo"></a>
-            </div>
-            <ul class="links">
-                <i class="fa-solid fa-bars mobile-trigger"></i>
-                <li><a href="../index.html" >Home</a></li>
-                <li><a href="../index.html">About Me</a></li>
-                <li class="portfolioLi">
-                    <a href="../index.html" class="active">Portfolio</a>
-                        <ul class="works">
-                            <li><a href="MiskCampingWorks.html">Misk Camping</a></li>
-                            <li><a href="MAAWorks.html" class="active">MAA</a></li>
-                            <li><a href="CoursesHubWorks.html">Courses Hub</a></li>
-                        </ul> 
-                </li>
-                <li><a href="../index.html">Services</a></li>
-                <li><a href="../index.html">Contact Me</a></li>
-            </ul>
-            <div class="mobile-overlay">
-                <div class="mobile-content">
-                    <span class="mobile-close">&times;</span>
-                    <ul class="mobile-list">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html">About Me</a></li>
-                        <li class="portfolioLi">
-                            <a href="../index.html"class="active">Portfolio</a>
-                                <ul class="works">
-                                    <li><a href="MiskCampingWorks.html">Misk Camping</a></li>
-                                    <li><a href="MAAWorks.html" class="active">MAA</a></li>
-                                    <li><a href="CoursesHubWorks.html">Courses Hub</a></li>
-                                </ul> 
-                        </li>
-                        <li><a href="../index.html">Services</a></li>
-                        <li><a href="../index.html">Contact Me</a></li>
-                    </ul>
+    <!-- Start Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="custom-logo-container">
+                        <div class="logo-circle">
+                            <span style="color: var(--primary-color); font-weight: 900; font-size: 20px;">M</span>
+                        </div>
+                        <span class="logo-text">Iskandar</span>
+                    </div>
                 </div>
-            </div>
-        </nav>
+
+                <!-- Desktop Menu -->
+                <ul class="links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html">About Me</a></li>
+                    <li class="portfolioLi">
+                        <a href="">Projects <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <ul class="works">
+                            <li><a href="MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                            <li><a href="MAAWorks.html" class="active"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                            <li><a href="CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                            <li><a href="Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="Certificates.html">Certificates</a></li>
+                    <li><a href="../index.html#contactme" class="contact-btn">Contact Me</a></li>
+                </ul>
+
+                <!-- Mobile Trigger -->
+                <button class="mobile-trigger" onclick="toggleMenu(true)">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <!-- Backdrop -->
+                <div class="menu-backdrop" onclick="toggleMenu(false)"></div>
+
+                <!-- Mobile Side Menu -->
+                <div class="mobile-overlay">
+                    <div class="mobile-content">
+                        <span class="mobile-close" onclick="toggleMenu(false)">&times;</span>
+                        
+                        <ul class="mobile-list">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../index.html#about_me">About Me</a></li>
+                            
+                            <li class="projectsLi">
+                                <span class="portfolio-label">Projects</span>
+                                <ul class="works-mobile">
+                                    <li><a href="MiskCampingWorks.html"><i class="fa-solid fa-mountain-sun"></i> Misk Camping</a></li>
+                                    <li><a href="MAAWorks.html" class="active"><i class="fa-solid fa-laptop-code"></i> MAA</a></li>
+                                    <li><a href="CoursesHubWorks.html"><i class="fa-solid fa-graduation-cap"></i> Courses Hub</a></li>
+                                    <li><a href="Creative Snippets.html"><i class="fa-solid fa-palette"></i> Creative Snippets</a></li>
+                                </ul> 
+                            </li>
+
+                            <li><a href="../index.html#services">Services</a></li>
+                            <li><a href="Certificates.html" class="active">Certificates</a></li>
+                            <li style="margin-top: 30px;padding: 0px;">
+                                <a href="../index.html#contactme" style="background: var(--primary-color); color: #000; display: block; text-align: center; padding: 5px; border-radius: 12px; font-weight: 800;">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
+    <!-- End Header -->
     <div class="container postsAndReels maa">
         <h1 class="main-title">
-            <span class="fast-flicker">Some </span>  <span class="flicker"> Posts </span> 
+            <span class="flicker">Some </span>  <span class="flicker"> Posts </span> 
         </h1>
         <div class="posts">
+            <div class="post 18"><img src="../Images/MAA/p18.jpg" alt="" loading="lazy" class="box hidden"></div>
+            <div class="post 19"><img src="../Images/MAA/p19.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 10"><img src="../Images/MAA/p10.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 11"><img src="../Images/MAA/p11.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 12"><img src="../Images/MAA/p12.jpg" alt="" loading="lazy" class="box hidden"></div>
@@ -85,6 +116,8 @@
             <div class="post 14"><img src="../Images/MAA/p14.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 15"><img src="../Images/MAA/p15.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 16"><img src="../Images/MAA/p16.jpg" alt="" loading="lazy" class="box hidden"></div>
+            <div class="post 17"><img src="../Images/MAA/p17.jpg" alt="" loading="lazy" class="box hidden"></div>
+            
             <div class="post 1"><img src="../Images/MAA/p1.jpg" alt="" loading="lazy" class="box hidden"id="main-img"></div>
             <div class="post 2"><img src="../Images/MAA/p2.jpg" alt="" loading="lazy" class="box hidden"></div>
             <div class="post 3"><img src="../Images/MAA/p3.jpg" alt="" loading="lazy" class="box hidden"></div>
@@ -96,7 +129,7 @@
             <div class="post 8"><img src="../Images/MAA/p9.png" alt="" loading="lazy" class="box hidden"></div>
         </div>
         <h1 class="main-title">
-            <span class="fast-flicker">Some </span>  <span class="flicker"> Reels </span> 
+            <span class="flicker">Some </span>  <span class="flicker"> Reels </span> 
         </h1>
         <div class="reels">
             <div class="reel 1" class="box hidden"><video src="../Reels/MAA/r1.mp4" controls muted alt="reel1"></video></div>
