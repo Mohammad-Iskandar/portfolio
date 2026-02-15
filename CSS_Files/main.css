@@ -2460,7 +2460,6 @@ body.preload *:not(.loader):not(.loader *) {
 }
 .timeline-link:hover {
     border-color: var(--special-text-color);
-    color: var(--special-text-color);
 }
 
 /* 4. Lightbox */
