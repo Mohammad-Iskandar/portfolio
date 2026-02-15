@@ -1,5 +1,5 @@
 const options = {
-    strings: ["Mohammad Iskandar", "social media manager ", "Front-End Developer ", "IT student"],
+    strings: ["Mohammad Iskandar " , "Graphic Designer ", "Social Media Manager ", "Front-End Developer ", "IT student "],
     typeSpeed:60, 
     backSpeed: 60, 
     loop: true, 
