@@ -428,9 +428,9 @@ body {
         }
 
         /* Hero */
-        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .hero h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 900; }
-        .hero span { color: var(--primary-color); }
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 900; }
+.hero span { color: var(--primary-color); }
 /* End Header */
 /* Start hero Sections */
 .landing {
@@ -473,13 +473,16 @@ body {
 }
 .hero_section .photo img 
 {
-    position: absolute;
-    top: 18%;
-    right: -70px;
-    width: 570px;
-    height: 570px;
-    filter: drop-shadow(2px 4px 6px black) brightness(1.7);
+        position: absolute;
+    top: 19%;
+    right: 0px;
+    width: 420px;
+    height: 500px;
+    filter: brightness(1.1);
+    box-shadow: 0px 0px 11px var(--special-text-color);
     transition: var(--main-transition);
+    border-radius: 100%;
+    aspect-ratio: auto;
 }
 .hero_section .photo img.myImageForMobile
 {
@@ -650,7 +653,6 @@ body {
     top: 30px;
     position: relative;
     transition: var(--main-transition);
-    filter: brightness(1.2);
 }
 .about_me_container .socialMediaLinks
 {
@@ -762,6 +764,39 @@ body {
     background-size: 30px 100%;
     background-image: linear-gradient(135deg, var(--special-text-color) 25%, transparent 25%), linear-gradient(225deg, var(--special-text-color) 25%, transparent 25%);
     background-position: 0 0;
+}
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+}
+
+.scroll-indicator a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    animation: smoothBounce 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator a:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+@keyframes smoothBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 @media (max-width :450px)
 {
